@@ -28,4 +28,5 @@ public abstract class Bacterium {
     public void setAge(int age) {
         this.age = age;
     }
+    public abstract void evoluteIt();
 }

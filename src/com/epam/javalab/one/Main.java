@@ -1,10 +1,9 @@
 package com.epam.javalab.one;
 
-/**
- * Created by User on 031 31.10.17.
- */
+
 public class Main {
     public static void main(String[] args) {
-
+    Amphibian am = new Amphibian("Fish", 110000,"WateLive");
+        System.out.println(am.toString());
     }
 }
