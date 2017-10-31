@@ -1,3 +1,5 @@
+package com.epam.javalab.one;
+
 /**
  * Created by User on 031 31.10.17.
  */
