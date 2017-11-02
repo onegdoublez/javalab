@@ -1,19 +1,22 @@
 package com.epam.javalab.one;
 
 /**
- * Created by User on 031 31.10.17.
+ * Created by User on 002 02.11.17.
  */
 public abstract class Bacterium {
-    private String name;
-    private int age;
+
+    private String name = "Eubacteria";
+    private int age = 10000;
 
     public Bacterium(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    public String getName() {
+    public Bacterium() {
+    }
 
+    public String getName() {
         return name;
     }
 
@@ -22,11 +25,11 @@ public abstract class Bacterium {
     }
 
     public int getAge() {
+
         return age;
     }
 
     public void setAge(int age) {
         this.age = age;
     }
-    public abstract void evoluteIt();
 }
