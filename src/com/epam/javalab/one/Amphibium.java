@@ -8,30 +8,39 @@ public class Amphibium extends Bacterium implements Evolution, Swimming {
     private int age;
     private int weight;
     private int height;
+    private boolean isLive;
 
-    public Amphibium(String name, int age, int weight, int height) {
-        super(name, age);
+    public Amphibium(String name, int age, int weight, int height, boolean isLive) {
+
+        this.name = name;
+        this.age = age;
         this.weight = weight;
         this.height = height;
+        this.isLive = isLive;
     }
 
-    @Override
-    public String getName() {
+    public Amphibium(int age, int weight, int height, boolean isLive) {
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+        this.isLive = isLive;
+    }
 
+    public Amphibium() {
+    }
+
+    public String getName() {
         return name;
     }
 
-    @Override
     public void setName(String name) {
         this.name = name;
     }
 
-    @Override
     public int getAge() {
         return age;
     }
 
-    @Override
     public void setAge(int age) {
         this.age = age;
     }
@@ -52,6 +61,14 @@ public class Amphibium extends Bacterium implements Evolution, Swimming {
         this.height = height;
     }
 
+    public boolean isLive() {
+        return isLive;
+    }
+
+    public void setLive(boolean live) {
+        isLive = live;
+    }
+
     @Override
     public String evoluteIt(String evoluteTo) {
         return ("I'm evolute to -> " + evoluteTo);
@@ -59,5 +76,21 @@ public class Amphibium extends Bacterium implements Evolution, Swimming {
 
     public void swimming(){
         System.out.println("Yeap yeap i can swim!");;
+    }
+
+    @Override
+    void born() {
+        System.out.println("I'm born");
+    }
+
+    @Override
+    public String toString() {
+        return "Amphibium{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                ", height=" + height +
+                ", isLive=" + isLive +
+                '}';
     }
 }
